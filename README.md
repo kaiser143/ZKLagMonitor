@@ -1,9 +1,19 @@
-# ZKLagMonitor
+<h1 align="center">
+ZKLagMonitor
+<h5 align="center", style="color, #666">
+卡顿监听
+</h5>
+</h1>
 
-[![CI Status](https://img.shields.io/travis/deyang143@126.com/ZKLagMonitor.svg?style=flat)](https://travis-ci.org/deyang143@126.com/ZKLagMonitor)
-[![Version](https://img.shields.io/cocoapods/v/ZKLagMonitor.svg?style=flat)](https://cocoapods.org/pods/ZKLagMonitor)
-[![License](https://img.shields.io/cocoapods/l/ZKLagMonitor.svg?style=flat)](https://cocoapods.org/pods/ZKLagMonitor)
-[![Platform](https://img.shields.io/cocoapods/p/ZKLagMonitor.svg?style=flat)](https://cocoapods.org/pods/ZKLagMonitor)
+<p align="center">
+<img src="https://img.shields.io/cocoapods/v/ZKLagMonitor.svg?style=flat" />
+<img src="https://img.shields.io/badge/supporting-objectiveC-yellow.svg" />
+<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" />
+<img src="https://img.shields.io/cocoapods/p/ZKLagMonitor.svg?style=flat" />
+<img src="https://img.shields.io/badge/support-iOS 8+ -blue.svg?style=flat" />
+</p>
+<br>
+<br>
 
 ## Example
 

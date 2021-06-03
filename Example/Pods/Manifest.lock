@@ -1,0 +1,31 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - PLCrashReporter (1.7.2)
+  - ZKLagMonitor (0.1.0):
+    - PLCrashReporter
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - ZKLagMonitor (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - PLCrashReporter
+
+EXTERNAL SOURCES:
+  ZKLagMonitor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  PLCrashReporter: aab2bb5301bdc461a2006d657004fbcd748813b8
+  ZKLagMonitor: 723e39f6f0f3e29e18658011c8fb679524fb02dc
+
+PODFILE CHECKSUM: 6c9aa8808d203456c6b165ab300524afd3e82207
+
+COCOAPODS: 1.10.1

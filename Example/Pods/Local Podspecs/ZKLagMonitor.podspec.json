@@ -1,0 +1,28 @@
+{
+  "name": "ZKLagMonitor",
+  "version": "0.1.0",
+  "summary": "A short description of ZKLagMonitor.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/deyang143@126.com/ZKLagMonitor",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "deyang143@126.com": "deyang143@126.com"
+  },
+  "source": {
+    "git": "https://github.com/deyang143@126.com/ZKLagMonitor.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "static_framework": true,
+  "source_files": "ZKLagMonitor/Classes/**/*",
+  "dependencies": {
+    "PLCrashReporter": [
+
+    ]
+  }
+}

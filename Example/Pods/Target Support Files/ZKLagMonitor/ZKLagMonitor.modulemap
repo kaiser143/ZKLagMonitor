@@ -1,0 +1,6 @@
+framework module ZKLagMonitor {
+  umbrella header "ZKLagMonitor-umbrella.h"
+
+  export *
+  module * { export * }
+}
