@@ -7,6 +7,7 @@
 //
 
 #import "ZKLagMonitor.h"
+#import <CrashReporter/CrashReporter.h>
 
 @interface ZKLagMonitor () {
     NSInteger timeoutCount;        // 耗时次数
@@ -82,7 +83,7 @@
                     self->activity     = 0;
                     return;
                 }
-                NSLog(@"st = %ld,activity = %lu,timeoutCount = %ld,time:%@", st, self->activity, (long)self->timeoutCount, [self getCurTime]);
+//                NSLog(@"st = %ld,activity = %lu,timeoutCount = %ld,time:%@", st, self->activity, (long)self->timeoutCount, [self getCurTime]);
                 // kCFRunLoopBeforeSources - 即将处理source kCFRunLoopAfterWaiting - 刚从休眠中唤醒
                 // 获取kCFRunLoopBeforeSources到kCFRunLoopBeforeWaiting再到kCFRunLoopAfterWaiting的状态就可以知道是否有卡顿的情况。
                 // kCFRunLoopBeforeSources:停留在这个状态,表示在做很多事情
@@ -92,19 +93,17 @@
                     }
 
                     // 收集Crash信息也可用于实时获取各线程的调用堆栈
-                    //                    PLCrashReporterConfig *config = [[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll];
-                    //
-                    //                    PLCrashReporter *crashReporter = [[PLCrashReporter alloc] initWithConfiguration:config];
-                    //
-                    //                    NSData *data = [crashReporter generateLiveReport];
-                    //                    PLCrashReport *reporter = [[PLCrashReport alloc] initWithData:data error:NULL];
-                    //                    NSString *report = [PLCrashReportTextFormatter stringValueForCrashReport:reporter withTextFormat:PLCrashReportTextFormatiOS];
-                    NSString *report;
+                    PLCrashReporterConfig *config = [[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll];
 
+                    PLCrashReporter *crashReporter = [[PLCrashReporter alloc] initWithConfiguration:config];
+
+                    NSData *data = [crashReporter generateLiveReport];
+                    PLCrashReport *reporter = [[PLCrashReport alloc] initWithData:data error:NULL];
+                    NSString *report = [PLCrashReportTextFormatter stringValueForCrashReport:reporter withTextFormat:PLCrashReportTextFormatiOS];
                     NSLog(@"---------卡顿信息\n%@\n--------------", report);
                 }
             }
-            NSLog(@"dispatch_semaphore_wait timeoutCount = 0，time:%@", [self getCurTime]);
+//            NSLog(@"dispatch_semaphore_wait timeoutCount = 0，time:%@", [self getCurTime]);
             self->timeoutCount = 0;
         }
     });
