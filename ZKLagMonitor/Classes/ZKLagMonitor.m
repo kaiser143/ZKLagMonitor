@@ -18,6 +18,8 @@
     CFRunLoopActivity activity;     // 状态
 }
 
+@property (nonatomic, strong) PLCrashReporter *crashReporter;
+
 @end
 
 @implementation ZKLagMonitor
@@ -38,6 +40,9 @@
 - (instancetype)init {
     self = [super init];
     if (self == nil) return nil;
+    PLCrashReporterConfig *config = [[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD
+                                                                       symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll];
+    self.crashReporter = [[PLCrashReporter alloc] initWithConfiguration:config];
 
     return self;
 }
@@ -75,7 +80,7 @@
             // 因为下面 runloop 状态改变回调方法runLoopObserverCallBack中会将信号量递增 1,所以每次 runloop 状态改变后,下面的语句都会执行一次
             // dispatch_semaphore_wait:Returns zero on success, or non-zero if the timeout occurred.
             long st = dispatch_semaphore_wait(self->semaphore, dispatch_time(DISPATCH_TIME_NOW, 50 * NSEC_PER_MSEC));
-            NSLog(@"dispatch_semaphore_wait:st=%ld,time:%@", st, [self getCurTime]);
+//            NSLog(@"dispatch_semaphore_wait:st=%ld,time:%@", st, [self getCurTime]);
             if (st != 0) { // 信号量超时了 - 即 runloop 的状态长时间没有发生变更,长期处于某一个状态下
                 if (!self->observer) {
                     self->timeoutCount = 0;
@@ -87,20 +92,41 @@
                 // kCFRunLoopBeforeSources - 即将处理source kCFRunLoopAfterWaiting - 刚从休眠中唤醒
                 // 获取kCFRunLoopBeforeSources到kCFRunLoopBeforeWaiting再到kCFRunLoopAfterWaiting的状态就可以知道是否有卡顿的情况。
                 // kCFRunLoopBeforeSources:停留在这个状态,表示在做很多事情
-                if (self->activity == kCFRunLoopBeforeSources || self->activity == kCFRunLoopAfterWaiting) { // 发生卡顿,记录卡顿次数
+                if (self->activity == kCFRunLoopBeforeSources || self->activity == kCFRunLoopAfterWaiting) { // 发生卡 顿,记录卡顿次数
                     if (++self->timeoutCount < 5) {
                         continue; // 不足 5 次,直接 continue 当次循环,不将timeoutCount置为0
                     }
 
-                    // 收集Crash信息也可用于实时获取各线程的调用堆栈
-                    PLCrashReporterConfig *config = [[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll];
+                    // Enable the Crash Reporter.
+                    NSError *error;
+                    if (![self.crashReporter enableCrashReporterAndReturnError: &error]) {
+                        NSLog(@"Warning: Could not enable crash reporter: %@", error);
+                    }
+                    
+                    if ([self.crashReporter hasPendingCrashReport]) {
+                        NSError *error;
 
-                    PLCrashReporter *crashReporter = [[PLCrashReporter alloc] initWithConfiguration:config];
+                        // Try loading the crash report.
+                        NSData *data = [self.crashReporter loadPendingCrashReportDataAndReturnError:&error];
+                        if (data == nil) {
+                            NSLog(@"Failed to load crash report data: %@", error);
+                            return;
+                        }
 
-                    NSData *data = [crashReporter generateLiveReport];
-                    PLCrashReport *reporter = [[PLCrashReport alloc] initWithData:data error:NULL];
-                    NSString *report = [PLCrashReportTextFormatter stringValueForCrashReport:reporter withTextFormat:PLCrashReportTextFormatiOS];
-                    NSLog(@"---------卡顿信息\n%@\n--------------", report);
+                        // Retrieving crash reporter data.
+                        PLCrashReport *report = [[PLCrashReport alloc] initWithData:data error:&error];
+                        if (report == nil) {
+                            NSLog(@"Failed to parse crash report: %@", error);
+                            return;
+                        }
+
+                        // We could send the report from here, but we'll just print out some debugging info instead.
+                        NSString *text = [PLCrashReportTextFormatter stringValueForCrashReport:report withTextFormat:PLCrashReportTextFormatiOS];
+                        NSLog(@"---------卡顿信息\n%@\n--------------", text);
+
+                        // Purge the report.
+                        [self.crashReporter purgePendingCrashReport];
+                    }
                 }
             }
 //            NSLog(@"dispatch_semaphore_wait timeoutCount = 0，time:%@", [self getCurTime]);
@@ -130,9 +156,9 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     monitor->activity = activity;
 
     // 发送信号
-    dispatch_semaphore_t semaphore = monitor->semaphore;
-    long st                        = dispatch_semaphore_signal(semaphore);
-    NSLog(@"dispatch_semaphore_signal:st=%ld,time:%@", st, [ZKLagMonitor getCurTime]);
+//    dispatch_semaphore_t semaphore = monitor->semaphore;
+//    long st                        = dispatch_semaphore_signal(semaphore);
+//    NSLog(@"dispatch_semaphore_signal:st=%ld,time:%@", st, [ZKLagMonitor getCurTime]);
 
     /* Run Loop Observer Activities */
     //    typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
@@ -145,21 +171,21 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     //        kCFRunLoopAllActivities = 0x0FFFFFFFU
     //    };
 
-    if (activity == kCFRunLoopEntry) { // 即将进入RunLoop
-        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopEntry");
-    } else if (activity == kCFRunLoopBeforeTimers) { // 即将处理Timer
-        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopBeforeTimers");
-    } else if (activity == kCFRunLoopBeforeSources) { // 即将处理Source
-        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopBeforeSources");
-    } else if (activity == kCFRunLoopBeforeWaiting) { //即将进入休眠
-        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopBeforeWaiting");
-    } else if (activity == kCFRunLoopAfterWaiting) { // 刚从休眠中唤醒
-        NSLog(@"runLoopObserverCallBack - %@",@"kCFRunLoopAfterWaiting");
-    } else if (activity == kCFRunLoopExit) {    // 即将退出RunLoop
-        NSLog(@"runLoopObserverCallBack - %@",@"kCFRunLoopExit");
-    } else if (activity == kCFRunLoopAllActivities) {
-        NSLog(@"runLoopObserverCallBack - %@",@"kCFRunLoopAllActivities");
-    }
+//    if (activity == kCFRunLoopEntry) { // 即将进入RunLoop
+//        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopEntry");
+//    } else if (activity == kCFRunLoopBeforeTimers) { // 即将处理Timer
+//        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopBeforeTimers");
+//    } else if (activity == kCFRunLoopBeforeSources) { // 即将处理Source
+//        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopBeforeSources");
+//    } else if (activity == kCFRunLoopBeforeWaiting) { //即将进入休眠
+//        NSLog(@"runLoopObserverCallBack - %@", @"kCFRunLoopBeforeWaiting");
+//    } else if (activity == kCFRunLoopAfterWaiting) { // 刚从休眠中唤醒
+//        NSLog(@"runLoopObserverCallBack - %@",@"kCFRunLoopAfterWaiting");
+//    } else if (activity == kCFRunLoopExit) {    // 即将退出RunLoop
+//        NSLog(@"runLoopObserverCallBack - %@",@"kCFRunLoopExit");
+//    } else if (activity == kCFRunLoopAllActivities) {
+//        NSLog(@"runLoopObserverCallBack - %@",@"kCFRunLoopAllActivities");
+//    }
 }
 
 #pragma mark - private function
