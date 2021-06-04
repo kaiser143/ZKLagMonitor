@@ -6,155 +6,150 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 95C37651B376F2BF95DFE33DEB856BC6 /* Build configuration list for PBXAggregateTarget "PLCrashReporter" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = PLCrashReporter;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CF091C48A1EA5B7B255DF77C32C9E7D /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01722FBDB760FF0C391A563FDE1CC707 /* ZKLagMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5970C9BA977EF2710ACF708B4E7E0AA0 /* ZKLagMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C415342B4DB40DB44EB2712E56E04A /* UIApplication+StrictKeyWindow.m */; };
+		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04ED14269E3E063395E2A20C13709F42 /* SMCallLib.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEF644F2E03C5F823C5B03575FE7A81 /* SMCallLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
 		121439AB6B4061E1B6222256817548FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E658F388F01C72599CA75537950B6095 /* XCTest.framework */; };
-		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CECF729B9873FC80D6893287B9122DF /* UIImage+Diff.m */; };
+		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
+		1F60DD2A5F73CBD6570394C871F5137D /* Pods-ZKLagMonitor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49751C815420EF02633CA2F9A7D34672 /* Pods-ZKLagMonitor_Example-dummy.m */; };
+		211CFED496B68E0E0111FBCE0CE87AB2 /* ZKLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E33E97F6F387A9EA623B2E33EF6C82C6 /* ZKLagMonitor.m */; };
 		261E9A1AE202765BC24B54ED024C3899 /* Pods-ZKLagMonitor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B10CC329AD477331354418DBFFB854D8 /* Pods-ZKLagMonitor_Tests-dummy.m */; };
-		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC704E8BD8831B2BA16D726C9F92DD /* UIImage+Compare.m */; };
+		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
 		2E4C0BD2363ABABB6470FBA5415985AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */; };
-		38E05D87DD4CA05E7A1BD1237617E87A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		3EC8AC8EA10CE06E236298483E01B7E8 /* Pods-ZKLagMonitor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E45B70309EBB94DE2BDEEC2847F6D0DB /* Pods-ZKLagMonitor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E7E68A7F3FC39297C6D69D31CBDEBB7B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F59ACF395A3E7844FDDC03966FC0907 /* FBSnapshotTestCase-dummy.m */; };
-		88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CACF699B08207FA7D5BF2A49E9C800 /* FBSnapshotTestController.m */; };
-		8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 144DBD4CC06F85726F9C55D3104DDB8D /* FBSnapshotTestCase.m */; };
-		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 604E07C00334A3CB64949C9948538BE7 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184686671BF812A2D3056C6931E05EAC /* SwiftSupport.swift */; };
-		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3149757161BF96DB3E5F2B8463453AB4 /* UIImage+Snapshot.m */; };
-		B22276C151172927836EB9DF6F2F2312 /* ZKLagMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3AEB987643A1B9E31DFBCAD8F4270 /* ZKLagMonitor-dummy.m */; };
-		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB4A701E3C2B5C09D95E706B541A5D5 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		505211C61E3B16E28AFF0B03A775ECC7 /* SMCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DE51EF853083AF4BF8789AA52D221ABB /* SMCallStack.m */; };
+		51905BEF6426D1FF0040486484EDEBE4 /* SMCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 18A81A8274CC15643554041DD26631A4 /* SMCallTraceCore.c */; };
+		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
+		7B23FFF28ED5FE169E2AD7E567E18B3A /* ZKLagMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1631ED24C62A72898F15819D3053E6F3 /* ZKLagMonitor-dummy.m */; };
+		88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
+		88AD2949636C40638C84B1F5728406D1 /* SMCallStack.h in Headers */ = {isa = PBXBuildFile; fileRef = F422D88B21CD0F927191A55454F33118 /* SMCallStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
+		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
+		9DD3F6D0700ADD253C0B7356BEEDDF1F /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FF5CC8CD1C332DB33A4CB3CAE17871 /* BSBacktraceLogger.m */; };
+		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
+		B3F1E64E323D4570651DE6CB129BE27F /* ZKLagMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86621E38E0C9FBB6295D06955735F50A /* ZKLagMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BD4953074A12E769ED4E6C94F5E73694 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */; };
-		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = B24B0D4F647124D56D15279224E0DF99 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C86E7F5CCE478A783BE5F8E5E5275AFE /* ZKLagMonitor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82AF1487BFEE559E8FE73F1E03C9C892 /* ZKLagMonitor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9DBBE2B31FCE88F476DE927C1556E00 /* Pods-ZKLagMonitor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B94526BBFBE674DDBD74CDABE16F76FE /* Pods-ZKLagMonitor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C82E9348033715D07DCEC8A601834B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		CA63ADACAC6C2BF1E30108E6BEF68A09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 377328078DAE4139D83F65153C890E80 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CF15CDD3487B454ECF3A35DEFFD5470C /* Pods-ZKLagMonitor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B94526BBFBE674DDBD74CDABE16F76FE /* Pods-ZKLagMonitor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D7A7165597D6A8C44197B11947D3E24E /* ZKLagMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 038D5025D00A5B302810F68297565EB4 /* ZKLagMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCA74F50F692FED0256201FA4ED7148F /* SMCallTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72B6CBB994A01D71B7C45578C8231C /* SMCallTrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E040F22F002A356ACFFBE5EB174CB478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
+		E432CDEBA4971827E7DC88742EDCF515 /* SMCallTraceTimeCostModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BD07B418A419E4CDBB9F3BD5E6ADB1 /* SMCallTraceTimeCostModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E479623F43224953C881757F1960F2E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0098DFDAB8687974BA232D5A0E8032 /* FBSnapshotTestCasePlatform.m */; };
-		E990ED58CEA9FBBAC552BFC8CEB2E662 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
-		EBB7C949D0ECA08ACDDB5BE317746812 /* Pods-ZKLagMonitor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49751C815420EF02633CA2F9A7D34672 /* Pods-ZKLagMonitor_Example-dummy.m */; };
-		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D53F6515A8332A1FF268B86F5A5403B /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F67ED032A4246E7A6D912E60170DB58A /* ZKLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A4D8547ADC62CBAEE095BF8335EE64 /* ZKLagMonitor.m */; };
-		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 475CED01A8E9FF5B38956C599304DB12 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
+		E9B8DB79DF8A1EBE4E0A9587972B495C /* SMCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E2111A9BE66C6966A7CCA6F9C4A58A /* SMCallLib.m */; };
+		EE45EA9170318E66D0ABF22BA188C773 /* BSBacktraceLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A9D25192C1A42FCBFAAEA41B18BDFA /* BSBacktraceLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE552CBBCD27C6BB66A6D205BD136E4F /* SMCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = CC97224EC3122A06AD1357ACA15F92F1 /* SMCallTrace.m */; };
+		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F4321B1BE21DBAFEF05BF4EF455DF30A /* SMCallTraceCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 017B7DE6EA20AF5448DD69128A72C452 /* SMCallTraceCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F81C06468976B80FC8A76216D0C28F5C /* SMCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A720C180302CF0375327B4225C3E77 /* SMCallTraceTimeCostModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3BCCA279FB66A76D21C16BD909B882FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AF0A977A1CCE7C11DF0A78EA3C568AE;
-			remoteInfo = ZKLagMonitor;
-		};
-		6CE43CD9B09BA82517124A0D9A997B56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D53C58097CCE41070956936598B94B4;
-			remoteInfo = PLCrashReporter;
-		};
-		97C2F6C9BABDE3DB00D4EE8192F51AB4 /* PBXContainerItemProxy */ = {
+		2F1738C2695F177A97773C9DCBB4D35E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4EF58A55EEB55BA6EF8AD7030EB0FB71;
 			remoteInfo = "Pods-ZKLagMonitor_Example";
 		};
-		A3D149FC53B1A5990378CB4EB8F21C26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D53C58097CCE41070956936598B94B4;
-			remoteInfo = PLCrashReporter;
-		};
-		F06B6993B52D693037FDA148D12BFC94 /* PBXContainerItemProxy */ = {
+		CBDDD918F5112E594A37F78E90F964E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
 			remoteInfo = FBSnapshotTestCase;
 		};
+		CC3D5D0E8FAD61F675C0AA3DF093C70F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AF0A977A1CCE7C11DF0A78EA3C568AE;
+			remoteInfo = ZKLagMonitor;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		024AFA15DC8617104FB8E35D3672EC67 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		144DBD4CC06F85726F9C55D3104DDB8D /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		184686671BF812A2D3056C6931E05EAC /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		00E2111A9BE66C6966A7CCA6F9C4A58A /* SMCallLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SMCallLib.m; sourceTree = "<group>"; };
+		017B7DE6EA20AF5448DD69128A72C452 /* SMCallTraceCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMCallTraceCore.h; sourceTree = "<group>"; };
+		02F5C22A5A19F0D42A0CB3D6EBB7F9C2 /* ZKLagMonitor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZKLagMonitor-Info.plist"; sourceTree = "<group>"; };
+		038D5025D00A5B302810F68297565EB4 /* ZKLagMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZKLagMonitor.h; path = ZKLagMonitor/Classes/ZKLagMonitor.h; sourceTree = "<group>"; };
+		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		12A720C180302CF0375327B4225C3E77 /* SMCallTraceTimeCostModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SMCallTraceTimeCostModel.m; sourceTree = "<group>"; };
+		1631ED24C62A72898F15819D3053E6F3 /* ZKLagMonitor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZKLagMonitor-dummy.m"; sourceTree = "<group>"; };
+		18A81A8274CC15643554041DD26631A4 /* SMCallTraceCore.c */ = {isa = PBXFileReference; includeInIndex = 1; path = SMCallTraceCore.c; sourceTree = "<group>"; };
 		19A740B957990B5325F9B272F04AFC1E /* Pods-ZKLagMonitor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZKLagMonitor_Example.modulemap"; sourceTree = "<group>"; };
+		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		1BA11A80D76B824FA125485B5E060F54 /* Pods-ZKLagMonitor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZKLagMonitor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1C583D6679D05CB4DB97E7F129ECC964 /* Pods-ZKLagMonitor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZKLagMonitor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1CBA38EF774D307BBED644C708BFD532 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
-		1CF091C48A1EA5B7B255DF77C32C9E7D /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		21D5CE05B49900238AB58CB825E78EFF /* ZKLagMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZKLagMonitor.debug.xcconfig; sourceTree = "<group>"; };
-		29A4D8547ADC62CBAEE095BF8335EE64 /* ZKLagMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZKLagMonitor.m; path = ZKLagMonitor/Classes/ZKLagMonitor.m; sourceTree = "<group>"; };
-		2A37D274BF6602786D5517BC35E5A7AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2EB99210D722BA766681417538B29C53 /* ZKLagMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZKLagMonitor-prefix.pch"; sourceTree = "<group>"; };
+		1EE75BE32CEC75E982EA34AAA710C306 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		2C14DB0C3E23E8989EC767DF558AA5BC /* ZKLagMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZKLagMonitor.debug.xcconfig; sourceTree = "<group>"; };
+		2CE0EC3309C152CABECF972FBC044F15 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		2FAD179A16C119AEE1758A7EB804E3C8 /* Pods-ZKLagMonitor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZKLagMonitor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3149757161BF96DB3E5F2B8463453AB4 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		31ADFBCEFA249C8223C6EC8A50253E29 /* ZKLagMonitor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZKLagMonitor-Info.plist"; sourceTree = "<group>"; };
 		3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		32BC704E8BD8831B2BA16D726C9F92DD /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		377328078DAE4139D83F65153C890E80 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
+		32A9D25192C1A42FCBFAAEA41B18BDFA /* BSBacktraceLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		39D711004AA86088F8612C4CFEB761FE /* ZKLagMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZKLagMonitor.framework; path = ZKLagMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB4A701E3C2B5C09D95E706B541A5D5 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		3CECF729B9873FC80D6893287B9122DF /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		3F59ACF395A3E7844FDDC03966FC0907 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		41EB22093B27DA6B16AFF8B456125C5B /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
-		475CED01A8E9FF5B38956C599304DB12 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		49751C815420EF02633CA2F9A7D34672 /* Pods-ZKLagMonitor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZKLagMonitor_Example-dummy.m"; sourceTree = "<group>"; };
+		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5970C9BA977EF2710ACF708B4E7E0AA0 /* ZKLagMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZKLagMonitor.h; path = ZKLagMonitor/Classes/ZKLagMonitor.h; sourceTree = "<group>"; };
+		59FF5CC8CD1C332DB33A4CB3CAE17871 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		604E07C00334A3CB64949C9948538BE7 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		6588290CE39DF60D0BF772421A8742D9 /* Pods_ZKLagMonitor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZKLagMonitor_Example.framework; path = "Pods-ZKLagMonitor_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D53F6515A8332A1FF268B86F5A5403B /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		7AC3AEB987643A1B9E31DFBCAD8F4270 /* ZKLagMonitor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZKLagMonitor-dummy.m"; sourceTree = "<group>"; };
+		68664F1505A3463462D55EC3B3BF6C7D /* ZKLagMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZKLagMonitor.release.xcconfig; sourceTree = "<group>"; };
+		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		7B4A83D8CDC4EF28296AD00D36A3FF6F /* Pods-ZKLagMonitor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZKLagMonitor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		82AF1487BFEE559E8FE73F1E03C9C892 /* ZKLagMonitor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZKLagMonitor-umbrella.h"; sourceTree = "<group>"; };
-		8A63DB5CB0FDE224C860E92155D8E7AE /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		8BBC341C1B17695B257825F04E8A1303 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		8C0098DFDAB8687974BA232D5A0E8032 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		912B1BF7329B08A89775AD2515A4B8DA /* ZKLagMonitor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZKLagMonitor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
+		84D76EEE6C5E25287837D83A061A6614 /* ZKLagMonitor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZKLagMonitor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		86621E38E0C9FBB6295D06955735F50A /* ZKLagMonitor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZKLagMonitor-umbrella.h"; sourceTree = "<group>"; };
+		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		88B71006CA200EC3A59BA3B7FB1DAF70 /* ZKLagMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZKLagMonitor-prefix.pch"; sourceTree = "<group>"; };
+		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		9485A38C982A51414488249C9361D3FC /* Pods-ZKLagMonitor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZKLagMonitor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		972866B4373F2ECAA25A71DDCC9FB327 /* ZKLagMonitor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZKLagMonitor.modulemap; sourceTree = "<group>"; };
+		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		97CB2164B3CD6C03292EF76ACDFD63F3 /* Pods-ZKLagMonitor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZKLagMonitor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DDD44DAD4AAAE92592E5FB1B2C644C5 /* Pods-ZKLagMonitor_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZKLagMonitor_Example-Info.plist"; sourceTree = "<group>"; };
-		A061EC6D03D90D081F39D99FC16A66D3 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		A072E2457A08300A5D9EA9F97EF8827B /* Pods_ZKLagMonitor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZKLagMonitor_Tests.framework; path = "Pods-ZKLagMonitor_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		B10CC329AD477331354418DBFFB854D8 /* Pods-ZKLagMonitor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZKLagMonitor_Tests-dummy.m"; sourceTree = "<group>"; };
-		B24B0D4F647124D56D15279224E0DF99 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		B3BD07B418A419E4CDBB9F3BD5E6ADB1 /* SMCallTraceTimeCostModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMCallTraceTimeCostModel.h; sourceTree = "<group>"; };
+		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		B94526BBFBE674DDBD74CDABE16F76FE /* Pods-ZKLagMonitor_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZKLagMonitor_Example-umbrella.h"; sourceTree = "<group>"; };
 		BF3094701F3112E161A7E3E377AC6E4C /* Pods-ZKLagMonitor_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZKLagMonitor_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		CC97224EC3122A06AD1357ACA15F92F1 /* SMCallTrace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SMCallTrace.m; sourceTree = "<group>"; };
 		CE86B2CC15D406F46E3636B7FEF795C6 /* Pods-ZKLagMonitor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZKLagMonitor_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		DD00C78B673B249860867BF8C313A0BF /* Pods-ZKLagMonitor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZKLagMonitor_Tests.modulemap"; sourceTree = "<group>"; };
-		E1C415342B4DB40DB44EB2712E56E04A /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		DE51EF853083AF4BF8789AA52D221ABB /* SMCallStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SMCallStack.m; sourceTree = "<group>"; };
+		DF72B6CBB994A01D71B7C45578C8231C /* SMCallTrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMCallTrace.h; sourceTree = "<group>"; };
+		E33E97F6F387A9EA623B2E33EF6C82C6 /* ZKLagMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZKLagMonitor.m; path = ZKLagMonitor/Classes/ZKLagMonitor.m; sourceTree = "<group>"; };
 		E45B70309EBB94DE2BDEEC2847F6D0DB /* Pods-ZKLagMonitor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZKLagMonitor_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E7E68A7F3FC39297C6D69D31CBDEBB7B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		EB6DD39A95C5083E5E9D2456658C31C3 /* ZKLagMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZKLagMonitor.release.xcconfig; sourceTree = "<group>"; };
+		EAEF644F2E03C5F823C5B03575FE7A81 /* SMCallLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMCallLib.h; sourceTree = "<group>"; };
 		EDA4681A1C88FB6C172274473DE0A191 /* Pods-ZKLagMonitor_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZKLagMonitor_Tests-Info.plist"; sourceTree = "<group>"; };
-		EEE9FBA16DE97A655C2AAE3F83830497 /* PLCrashReporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PLCrashReporter.debug.xcconfig; sourceTree = "<group>"; };
 		EFEF9E5B50E80DB7DD5BEC8A71AD063B /* Pods-ZKLagMonitor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZKLagMonitor_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F7CACF699B08207FA7D5BF2A49E9C800 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		FA4AC545BF8FF0EE3F638EB881E1324A /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = "iOS Framework/CrashReporter.framework"; sourceTree = "<group>"; };
-		FD7E953BAF35B14ECA645B7F3A641396 /* PLCrashReporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PLCrashReporter.release.xcconfig; sourceTree = "<group>"; };
+		F422D88B21CD0F927191A55454F33118 /* SMCallStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMCallStack.h; sourceTree = "<group>"; };
+		F5BEA4E2E903D44D21A8696197C7238B /* ZKLagMonitor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZKLagMonitor.modulemap; sourceTree = "<group>"; };
+		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,19 +161,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		468B4815EB0E710F2F50C490FCDBB3AA /* Frameworks */ = {
+		58AE79CD8452D6FD4600311939835940 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E990ED58CEA9FBBAC552BFC8CEB2E662 /* Foundation.framework in Frameworks */,
+				E040F22F002A356ACFFBE5EB174CB478 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEB72CE56365A03234220C7082CC0276 /* Frameworks */ = {
+		6C192B8BA4F3B765B6AF1458261F4879 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E05D87DD4CA05E7A1BD1237617E87A /* Foundation.framework in Frameworks */,
+				C82E9348033715D07DCEC8A601834B08 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,45 +191,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D8CA27BAEDAFF253BC60338B287FAA6 /* Frameworks */ = {
+		21CD927C3A7BBE1732A15C584F1ED7F5 /* callTrace */ = {
 			isa = PBXGroup;
 			children = (
-				FA4AC545BF8FF0EE3F638EB881E1324A /* CrashReporter.framework */,
+				DF72B6CBB994A01D71B7C45578C8231C /* SMCallTrace.h */,
+				CC97224EC3122A06AD1357ACA15F92F1 /* SMCallTrace.m */,
+				18A81A8274CC15643554041DD26631A4 /* SMCallTraceCore.c */,
+				017B7DE6EA20AF5448DD69128A72C452 /* SMCallTraceCore.h */,
+				B3BD07B418A419E4CDBB9F3BD5E6ADB1 /* SMCallTraceTimeCostModel.h */,
+				12A720C180302CF0375327B4225C3E77 /* SMCallTraceTimeCostModel.m */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		21A9D61967729D264498C63D3D47A8B2 /* ZKLagMonitor */ = {
-			isa = PBXGroup;
-			children = (
-				5970C9BA977EF2710ACF708B4E7E0AA0 /* ZKLagMonitor.h */,
-				29A4D8547ADC62CBAEE095BF8335EE64 /* ZKLagMonitor.m */,
-				A1E7E7ADA2FB2ACC2181DB22B9969AC1 /* Pod */,
-				433A2E4C605AD6BEE6A27FA8FEBD3396 /* Support Files */,
-			);
-			name = ZKLagMonitor;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		2280F2EFE051B0E18CAC8632D7057CD8 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				1CF091C48A1EA5B7B255DF77C32C9E7D /* FBSnapshotTestCase.h */,
-				144DBD4CC06F85726F9C55D3104DDB8D /* FBSnapshotTestCase.m */,
-				B24B0D4F647124D56D15279224E0DF99 /* FBSnapshotTestCasePlatform.h */,
-				8C0098DFDAB8687974BA232D5A0E8032 /* FBSnapshotTestCasePlatform.m */,
-				604E07C00334A3CB64949C9948538BE7 /* FBSnapshotTestController.h */,
-				F7CACF699B08207FA7D5BF2A49E9C800 /* FBSnapshotTestController.m */,
-				E7E68A7F3FC39297C6D69D31CBDEBB7B /* UIApplication+StrictKeyWindow.h */,
-				E1C415342B4DB40DB44EB2712E56E04A /* UIApplication+StrictKeyWindow.m */,
-				6D53F6515A8332A1FF268B86F5A5403B /* UIImage+Compare.h */,
-				32BC704E8BD8831B2BA16D726C9F92DD /* UIImage+Compare.m */,
-				377328078DAE4139D83F65153C890E80 /* UIImage+Diff.h */,
-				3CECF729B9873FC80D6893287B9122DF /* UIImage+Diff.m */,
-				3CB4A701E3C2B5C09D95E706B541A5D5 /* UIImage+Snapshot.h */,
-				3149757161BF96DB3E5F2B8463453AB4 /* UIImage+Snapshot.m */,
-			);
-			name = Core;
+			name = callTrace;
+			path = callTrace;
 			sourceTree = "<group>";
 		};
 		31B7AF24F553105BCE2B829E9E15B2A5 /* Pods-ZKLagMonitor_Tests */ = {
@@ -270,74 +238,56 @@
 			path = "Target Support Files/Pods-ZKLagMonitor_Example";
 			sourceTree = "<group>";
 		};
-		433A2E4C605AD6BEE6A27FA8FEBD3396 /* Support Files */ = {
+		4BA2479549DD918290454B1CDCD0B92B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				972866B4373F2ECAA25A71DDCC9FB327 /* ZKLagMonitor.modulemap */,
-				7AC3AEB987643A1B9E31DFBCAD8F4270 /* ZKLagMonitor-dummy.m */,
-				31ADFBCEFA249C8223C6EC8A50253E29 /* ZKLagMonitor-Info.plist */,
-				2EB99210D722BA766681417538B29C53 /* ZKLagMonitor-prefix.pch */,
-				82AF1487BFEE559E8FE73F1E03C9C892 /* ZKLagMonitor-umbrella.h */,
-				21D5CE05B49900238AB58CB825E78EFF /* ZKLagMonitor.debug.xcconfig */,
-				EB6DD39A95C5083E5E9D2456658C31C3 /* ZKLagMonitor.release.xcconfig */,
+				FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */,
+				277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */,
+				88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */,
+				6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */,
+				AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */,
+				7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */,
+				99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */,
+				0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */,
+				656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */,
+				235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */,
+				96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */,
+				4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */,
+				284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */,
+				D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ZKLagMonitor";
+			name = Core;
 			sourceTree = "<group>";
 		};
-		4D817D8EC13DB20EA8F01D66021EAA3B /* Pods */ = {
+		5BE9C95AEE662D95C3BE64DC11A1E77B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9689101A8044B1D5551B4B911F3A0955 /* FBSnapshotTestCase */,
-				C17ADE83F2C3B1685663A961C43BA3DE /* PLCrashReporter */,
+				BF521D7E3904656E58740042B426315E /* ZKLagMonitor */,
 			);
-			name = Pods;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		71E50A4CA8F827AA1E8380845721098B /* Support Files */ = {
+		73AFC3CE5AC713240B445E3ACB999F8F /* backtrace */ = {
 			isa = PBXGroup;
 			children = (
-				8A63DB5CB0FDE224C860E92155D8E7AE /* FBSnapshotTestCase.modulemap */,
-				3F59ACF395A3E7844FDDC03966FC0907 /* FBSnapshotTestCase-dummy.m */,
-				A061EC6D03D90D081F39D99FC16A66D3 /* FBSnapshotTestCase-Info.plist */,
-				024AFA15DC8617104FB8E35D3672EC67 /* FBSnapshotTestCase-prefix.pch */,
-				475CED01A8E9FF5B38956C599304DB12 /* FBSnapshotTestCase-umbrella.h */,
-				41EB22093B27DA6B16AFF8B456125C5B /* FBSnapshotTestCase.debug.xcconfig */,
-				1CBA38EF774D307BBED644C708BFD532 /* FBSnapshotTestCase.release.xcconfig */,
+				32A9D25192C1A42FCBFAAEA41B18BDFA /* BSBacktraceLogger.h */,
+				59FF5CC8CD1C332DB33A4CB3CAE17871 /* BSBacktraceLogger.m */,
+				EAEF644F2E03C5F823C5B03575FE7A81 /* SMCallLib.h */,
+				00E2111A9BE66C6966A7CCA6F9C4A58A /* SMCallLib.m */,
+				F422D88B21CD0F927191A55454F33118 /* SMCallStack.h */,
+				DE51EF853083AF4BF8789AA52D221ABB /* SMCallStack.m */,
+				21CD927C3A7BBE1732A15C584F1ED7F5 /* callTrace */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSnapshotTestCase";
+			name = backtrace;
+			path = ZKLagMonitor/Classes/backtrace;
 			sourceTree = "<group>";
 		};
-		9689101A8044B1D5551B4B911F3A0955 /* FBSnapshotTestCase */ = {
+		906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */ = {
 			isa = PBXGroup;
 			children = (
-				2280F2EFE051B0E18CAC8632D7057CD8 /* Core */,
-				71E50A4CA8F827AA1E8380845721098B /* Support Files */,
-				D13EE7746380E582299A281F9BE6B548 /* SwiftSupport */,
+				3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */,
 			);
-			name = FBSnapshotTestCase;
-			path = FBSnapshotTestCase;
-			sourceTree = "<group>";
-		};
-		A1E7E7ADA2FB2ACC2181DB22B9969AC1 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2A37D274BF6602786D5517BC35E5A7AE /* LICENSE */,
-				8BBC341C1B17695B257825F04E8A1303 /* README.md */,
-				912B1BF7329B08A89775AD2515A4B8DA /* ZKLagMonitor.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		A666B85749E0FFAD75C38DF8408F6F62 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EEE9FBA16DE97A655C2AAE3F83830497 /* PLCrashReporter.debug.xcconfig */,
-				FD7E953BAF35B14ECA645B7F3A641396 /* PLCrashReporter.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PLCrashReporter";
+			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
 		ABA3630124F7196CF15745CD0FEF685E /* Products */ = {
@@ -351,6 +301,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */,
+				1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */,
+				B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */,
+				D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */,
+				8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */,
+				9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */,
+				4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSnapshotTestCase";
+			sourceTree = "<group>";
+		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,42 +324,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C17ADE83F2C3B1685663A961C43BA3DE /* PLCrashReporter */ = {
+		BD2D60DE56CBB8C87BA07E0C1CCD0592 /* FBSnapshotTestCase */ = {
 			isa = PBXGroup;
 			children = (
-				0D8CA27BAEDAFF253BC60338B287FAA6 /* Frameworks */,
-				A666B85749E0FFAD75C38DF8408F6F62 /* Support Files */,
+				4BA2479549DD918290454B1CDCD0B92B /* Core */,
+				B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */,
+				906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */,
 			);
-			name = PLCrashReporter;
-			path = PLCrashReporter;
+			name = FBSnapshotTestCase;
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		BF521D7E3904656E58740042B426315E /* ZKLagMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				038D5025D00A5B302810F68297565EB4 /* ZKLagMonitor.h */,
+				E33E97F6F387A9EA623B2E33EF6C82C6 /* ZKLagMonitor.m */,
+				73AFC3CE5AC713240B445E3ACB999F8F /* backtrace */,
+				EB490BE4EB31EDEB97B6A9C5A1B393BE /* Pod */,
+				F423DD0AD464949C391DB91F62F6021A /* Support Files */,
+			);
+			name = ZKLagMonitor;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E30C23453FF368F7012D77FE6D3577D8 /* Development Pods */,
+				5BE9C95AEE662D95C3BE64DC11A1E77B /* Development Pods */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				4D817D8EC13DB20EA8F01D66021EAA3B /* Pods */,
+				E81A37DBDE41E671312C56736544E2FA /* Pods */,
 				ABA3630124F7196CF15745CD0FEF685E /* Products */,
 				E97BE6739B13CBCEAE841789AEEF0D9E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D13EE7746380E582299A281F9BE6B548 /* SwiftSupport */ = {
+		E81A37DBDE41E671312C56736544E2FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				184686671BF812A2D3056C6931E05EAC /* SwiftSupport.swift */,
+				BD2D60DE56CBB8C87BA07E0C1CCD0592 /* FBSnapshotTestCase */,
 			);
-			name = SwiftSupport;
-			sourceTree = "<group>";
-		};
-		E30C23453FF368F7012D77FE6D3577D8 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				21A9D61967729D264498C63D3D47A8B2 /* ZKLagMonitor */,
-			);
-			name = "Development Pods";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E97BE6739B13CBCEAE841789AEEF0D9E /* Targets Support Files */ = {
@@ -404,6 +375,31 @@
 				31B7AF24F553105BCE2B829E9E15B2A5 /* Pods-ZKLagMonitor_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EB490BE4EB31EDEB97B6A9C5A1B393BE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1EE75BE32CEC75E982EA34AAA710C306 /* LICENSE */,
+				2CE0EC3309C152CABECF972FBC044F15 /* README.md */,
+				84D76EEE6C5E25287837D83A061A6614 /* ZKLagMonitor.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F423DD0AD464949C391DB91F62F6021A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5BEA4E2E903D44D21A8696197C7238B /* ZKLagMonitor.modulemap */,
+				1631ED24C62A72898F15819D3053E6F3 /* ZKLagMonitor-dummy.m */,
+				02F5C22A5A19F0D42A0CB3D6EBB7F9C2 /* ZKLagMonitor-Info.plist */,
+				88B71006CA200EC3A59BA3B7FB1DAF70 /* ZKLagMonitor-prefix.pch */,
+				86621E38E0C9FBB6295D06955735F50A /* ZKLagMonitor-umbrella.h */,
+				2C14DB0C3E23E8989EC767DF558AA5BC /* ZKLagMonitor.debug.xcconfig */,
+				68664F1505A3463462D55EC3B3BF6C7D /* ZKLagMonitor.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ZKLagMonitor";
 			sourceTree = "<group>";
 		};
 		FB2668559AE577E6E8078C0C291AD417 /* iOS */ = {
@@ -420,12 +416,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2CA8D8948E7CC6718CCF48BFF2E1A4C4 /* Headers */ = {
+		023700FAF66438062312D062149F4963 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C86E7F5CCE478A783BE5F8E5E5275AFE /* ZKLagMonitor-umbrella.h in Headers */,
-				01722FBDB760FF0C391A563FDE1CC707 /* ZKLagMonitor.h in Headers */,
+				CF15CDD3487B454ECF3A35DEFFD5470C /* Pods-ZKLagMonitor_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,11 +439,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A27A522A058216D10FBA05A23C345325 /* Headers */ = {
+		8B699C1C5F2D164F7880EC61C11E3B82 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DBBE2B31FCE88F476DE927C1556E00 /* Pods-ZKLagMonitor_Example-umbrella.h in Headers */,
+				EE45EA9170318E66D0ABF22BA188C773 /* BSBacktraceLogger.h in Headers */,
+				04ED14269E3E063395E2A20C13709F42 /* SMCallLib.h in Headers */,
+				88AD2949636C40638C84B1F5728406D1 /* SMCallStack.h in Headers */,
+				DCA74F50F692FED0256201FA4ED7148F /* SMCallTrace.h in Headers */,
+				F4321B1BE21DBAFEF05BF4EF455DF30A /* SMCallTraceCore.h in Headers */,
+				E432CDEBA4971827E7DC88742EDCF515 /* SMCallTraceTimeCostModel.h in Headers */,
+				B3F1E64E323D4570651DE6CB129BE27F /* ZKLagMonitor-umbrella.h in Headers */,
+				D7A7165597D6A8C44197B11947D3E24E /* ZKLagMonitor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,8 +477,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				3BF51602BC5C246F97C32605D5DA824A /* PBXTargetDependency */,
-				556D9CA1C3867F421C79EA7B8BF3A50F /* PBXTargetDependency */,
+				734229227AAE7891CBC06ED3D07C4ACB /* PBXTargetDependency */,
+				B6A85D1667DC0F1B6564BBDA0830C531 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZKLagMonitor_Tests";
 			productName = "Pods-ZKLagMonitor_Tests";
@@ -485,18 +487,17 @@
 		};
 		4EF58A55EEB55BA6EF8AD7030EB0FB71 /* Pods-ZKLagMonitor_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0BED21BB89B83FD98CE0B94D89E99F68 /* Build configuration list for PBXNativeTarget "Pods-ZKLagMonitor_Example" */;
+			buildConfigurationList = 2A49FCAB3807BFB865ACEEE4B9D18B62 /* Build configuration list for PBXNativeTarget "Pods-ZKLagMonitor_Example" */;
 			buildPhases = (
-				A27A522A058216D10FBA05A23C345325 /* Headers */,
-				1070C1874B5C0A9CC26DB31785C31D81 /* Sources */,
-				AEB72CE56365A03234220C7082CC0276 /* Frameworks */,
-				DAA58E18EF541CE2B5CD2DA39AF9392B /* Resources */,
+				023700FAF66438062312D062149F4963 /* Headers */,
+				555A67E6AE8BE8DEC2EB2E4092F4F475 /* Sources */,
+				58AE79CD8452D6FD4600311939835940 /* Frameworks */,
+				F0E16560B7FEC9748F41519C72A02FBA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FB606697DA89B1D6D8BBF699C49EB6DA /* PBXTargetDependency */,
-				302699BB281F7F1E730ACC5CFB7032A4 /* PBXTargetDependency */,
+				152DBCB09785C7AFCC19EC9772E4C688 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZKLagMonitor_Example";
 			productName = "Pods-ZKLagMonitor_Example";
@@ -505,17 +506,16 @@
 		};
 		5AF0A977A1CCE7C11DF0A78EA3C568AE /* ZKLagMonitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D7376F9AD3CEA90BF13CFF138458258 /* Build configuration list for PBXNativeTarget "ZKLagMonitor" */;
+			buildConfigurationList = D3110ED3CC049FC8716CA827FD47B4CA /* Build configuration list for PBXNativeTarget "ZKLagMonitor" */;
 			buildPhases = (
-				2CA8D8948E7CC6718CCF48BFF2E1A4C4 /* Headers */,
-				CBDECE26D49F735F2CC8D8417490B51D /* Sources */,
-				468B4815EB0E710F2F50C490FCDBB3AA /* Frameworks */,
-				39EC4D2291E77285C76A657EE78358E3 /* Resources */,
+				8B699C1C5F2D164F7880EC61C11E3B82 /* Headers */,
+				0C4F37C7C6EDAD03B8BA2800D547A7A6 /* Sources */,
+				6C192B8BA4F3B765B6AF1458261F4879 /* Frameworks */,
+				8E6E4DD72A1D246C4CDEC28E65347268 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A4A75FAFB7F65F9CDEC7F37397DED255 /* PBXTargetDependency */,
 			);
 			name = ZKLagMonitor;
 			productName = ZKLagMonitor;
@@ -563,7 +563,6 @@
 			projectRoot = "";
 			targets = (
 				98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */,
-				8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */,
 				4EF58A55EEB55BA6EF8AD7030EB0FB71 /* Pods-ZKLagMonitor_Example */,
 				0788A27FB4C5403D81AAF704B7D6AAF0 /* Pods-ZKLagMonitor_Tests */,
 				5AF0A977A1CCE7C11DF0A78EA3C568AE /* ZKLagMonitor */,
@@ -572,14 +571,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		39EC4D2291E77285C76A657EE78358E3 /* Resources */ = {
+		5CC655F1A6C7A45A9693160581076BAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CC655F1A6C7A45A9693160581076BAE /* Resources */ = {
+		8E6E4DD72A1D246C4CDEC28E65347268 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -593,7 +592,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAA58E18EF541CE2B5CD2DA39AF9392B /* Resources */ = {
+		F0E16560B7FEC9748F41519C72A02FBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -603,11 +602,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1070C1874B5C0A9CC26DB31785C31D81 /* Sources */ = {
+		0C4F37C7C6EDAD03B8BA2800D547A7A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB7C949D0ECA08ACDDB5BE317746812 /* Pods-ZKLagMonitor_Example-dummy.m in Sources */,
+				9DD3F6D0700ADD253C0B7356BEEDDF1F /* BSBacktraceLogger.m in Sources */,
+				E9B8DB79DF8A1EBE4E0A9587972B495C /* SMCallLib.m in Sources */,
+				505211C61E3B16E28AFF0B03A775ECC7 /* SMCallStack.m in Sources */,
+				EE552CBBCD27C6BB66A6D205BD136E4F /* SMCallTrace.m in Sources */,
+				51905BEF6426D1FF0040486484EDEBE4 /* SMCallTraceCore.c in Sources */,
+				F81C06468976B80FC8A76216D0C28F5C /* SMCallTraceTimeCostModel.m in Sources */,
+				7B23FFF28ED5FE169E2AD7E567E18B3A /* ZKLagMonitor-dummy.m in Sources */,
+				211CFED496B68E0E0111FBCE0CE87AB2 /* ZKLagMonitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555A67E6AE8BE8DEC2EB2E4092F4F475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F60DD2A5F73CBD6570394C871F5137D /* Pods-ZKLagMonitor_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,47 +649,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBDECE26D49F735F2CC8D8417490B51D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B22276C151172927836EB9DF6F2F2312 /* ZKLagMonitor-dummy.m in Sources */,
-				F67ED032A4246E7A6D912E60170DB58A /* ZKLagMonitor.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		302699BB281F7F1E730ACC5CFB7032A4 /* PBXTargetDependency */ = {
+		152DBCB09785C7AFCC19EC9772E4C688 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZKLagMonitor;
 			target = 5AF0A977A1CCE7C11DF0A78EA3C568AE /* ZKLagMonitor */;
-			targetProxy = 3BCCA279FB66A76D21C16BD909B882FC /* PBXContainerItemProxy */;
+			targetProxy = CC3D5D0E8FAD61F675C0AA3DF093C70F /* PBXContainerItemProxy */;
 		};
-		3BF51602BC5C246F97C32605D5DA824A /* PBXTargetDependency */ = {
+		734229227AAE7891CBC06ED3D07C4ACB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSnapshotTestCase;
 			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
-			targetProxy = F06B6993B52D693037FDA148D12BFC94 /* PBXContainerItemProxy */;
+			targetProxy = CBDDD918F5112E594A37F78E90F964E2 /* PBXContainerItemProxy */;
 		};
-		556D9CA1C3867F421C79EA7B8BF3A50F /* PBXTargetDependency */ = {
+		B6A85D1667DC0F1B6564BBDA0830C531 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ZKLagMonitor_Example";
 			target = 4EF58A55EEB55BA6EF8AD7030EB0FB71 /* Pods-ZKLagMonitor_Example */;
-			targetProxy = 97C2F6C9BABDE3DB00D4EE8192F51AB4 /* PBXContainerItemProxy */;
-		};
-		A4A75FAFB7F65F9CDEC7F37397DED255 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PLCrashReporter;
-			target = 8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */;
-			targetProxy = A3D149FC53B1A5990378CB4EB8F21C26 /* PBXContainerItemProxy */;
-		};
-		FB606697DA89B1D6D8BBF699C49EB6DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PLCrashReporter;
-			target = 8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */;
-			targetProxy = 6CE43CD9B09BA82517124A0D9A997B56 /* PBXContainerItemProxy */;
+			targetProxy = 2F1738C2695F177A97773C9DCBB4D35E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -713,39 +706,7 @@
 			};
 			name = Release;
 		};
-		300F5CD6D73B2AFFF78F0821669C63C1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA11A80D76B824FA125485B5E060F54 /* Pods-ZKLagMonitor_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZKLagMonitor_Example/Pods-ZKLagMonitor_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZKLagMonitor_Example/Pods-ZKLagMonitor_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3C63641329E6D4253765451B509A429E /* Release */ = {
+		2B91A3C99EC7B6042016E60D5BAE3776 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE86B2CC15D406F46E3636B7FEF795C6 /* Pods-ZKLagMonitor_Example.release.xcconfig */;
 			buildSettings = {
@@ -780,7 +741,7 @@
 		};
 		3E39A517897BFCDD1DD7268CB1B69BE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41EB22093B27DA6B16AFF8B456125C5B /* FBSnapshotTestCase.debug.xcconfig */;
+			baseConfigurationReference = 9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -798,6 +759,37 @@
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
 				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		484B7618364020843C49CF0C8BACD82B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C14DB0C3E23E8989EC767DF558AA5BC /* ZKLagMonitor.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZKLagMonitor/ZKLagMonitor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor.modulemap";
+				PRODUCT_MODULE_NAME = ZKLagMonitor;
+				PRODUCT_NAME = ZKLagMonitor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -870,23 +862,11 @@
 			};
 			name = Release;
 		};
-		93C57C6FD42270B8E8F09865FB105115 /* Debug */ = {
+		95CD7C7C9281B602071224B7430EC263 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEE9FBA16DE97A655C2AAE3F83830497 /* PLCrashReporter.debug.xcconfig */;
+			baseConfigurationReference = 1BA11A80D76B824FA125485B5E060F54 /* Pods-ZKLagMonitor_Example.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9DEB7792CE3B9D6916B60894AE3AC4E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB6DD39A95C5083E5E9D2456658C31C3 /* ZKLagMonitor.release.xcconfig */;
-			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -895,51 +875,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZKLagMonitor/ZKLagMonitor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZKLagMonitor_Example/Pods-ZKLagMonitor_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor.modulemap";
-				PRODUCT_MODULE_NAME = ZKLagMonitor;
-				PRODUCT_NAME = ZKLagMonitor;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZKLagMonitor_Example/Pods-ZKLagMonitor_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A2D17DBED74DAC094233D8ED870EB50E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21D5CE05B49900238AB58CB825E78EFF /* ZKLagMonitor.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZKLagMonitor/ZKLagMonitor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor.modulemap";
-				PRODUCT_MODULE_NAME = ZKLagMonitor;
-				PRODUCT_NAME = ZKLagMonitor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -948,7 +896,7 @@
 		};
 		BF531801B332EDF71FA8F4F9667B86BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CBA38EF774D307BBED644C708BFD532 /* FBSnapshotTestCase.release.xcconfig */;
+			baseConfigurationReference = 4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -974,20 +922,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C3115B16289137F9854DD9F281A6BE0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD7E953BAF35B14ECA645B7F3A641396 /* PLCrashReporter.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1089,18 +1023,41 @@
 			};
 			name = Debug;
 		};
+		F9AC1EA1725E69132EEC7EB5C3E14E20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68664F1505A3463462D55EC3B3BF6C7D /* ZKLagMonitor.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZKLagMonitor/ZKLagMonitor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/ZKLagMonitor/ZKLagMonitor.modulemap";
+				PRODUCT_MODULE_NAME = ZKLagMonitor;
+				PRODUCT_NAME = ZKLagMonitor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BED21BB89B83FD98CE0B94D89E99F68 /* Build configuration list for PBXNativeTarget "Pods-ZKLagMonitor_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				300F5CD6D73B2AFFF78F0821669C63C1 /* Debug */,
-				3C63641329E6D4253765451B509A429E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0C83A150CE321BDC389FC9EDA53D91F6 /* Build configuration list for PBXNativeTarget "Pods-ZKLagMonitor_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1110,11 +1067,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D7376F9AD3CEA90BF13CFF138458258 /* Build configuration list for PBXNativeTarget "ZKLagMonitor" */ = {
+		2A49FCAB3807BFB865ACEEE4B9D18B62 /* Build configuration list for PBXNativeTarget "Pods-ZKLagMonitor_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A2D17DBED74DAC094233D8ED870EB50E /* Debug */,
-				9DEB7792CE3B9D6916B60894AE3AC4E8 /* Release */,
+				95CD7C7C9281B602071224B7430EC263 /* Debug */,
+				2B91A3C99EC7B6042016E60D5BAE3776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1128,20 +1085,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95C37651B376F2BF95DFE33DEB856BC6 /* Build configuration list for PBXAggregateTarget "PLCrashReporter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93C57C6FD42270B8E8F09865FB105115 /* Debug */,
-				C3115B16289137F9854DD9F281A6BE0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A38070E189561F257BBD5A0A55CACCCF /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E39A517897BFCDD1DD7268CB1B69BE9 /* Debug */,
 				BF531801B332EDF71FA8F4F9667B86BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3110ED3CC049FC8716CA827FD47B4CA /* Build configuration list for PBXNativeTarget "ZKLagMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				484B7618364020843C49CF0C8BACD82B /* Debug */,
+				F9AC1EA1725E69132EEC7EB5C3E14E20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

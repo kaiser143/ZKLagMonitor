@@ -19,10 +19,5 @@
     "ios": "8.0"
   },
   "static_framework": true,
-  "source_files": "ZKLagMonitor/Classes/**/*",
-  "dependencies": {
-    "PLCrashReporter": [
-
-    ]
-  }
+  "source_files": "ZKLagMonitor/Classes/**/*"
 }

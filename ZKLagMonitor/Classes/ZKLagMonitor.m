@@ -7,10 +7,11 @@
 //
 
 #import "ZKLagMonitor.h"
-#import <CrashReporter/CrashReporter.h>
+#import "SMCallStack.h"
 
 @interface ZKLagMonitor () {
     NSInteger timeoutCount;        // 耗时次数
+    CFTimeInterval interval;
     CFRunLoopObserverRef observer; // 观察者
 
   @public
@@ -18,7 +19,7 @@
     CFRunLoopActivity activity;     // 状态
 }
 
-@property (nonatomic, strong) PLCrashReporter *crashReporter;
+@property (nonatomic, assign) BOOL generatingReport;
 
 @end
 
@@ -40,9 +41,6 @@
 - (instancetype)init {
     self = [super init];
     if (self == nil) return nil;
-    PLCrashReporterConfig *config = [[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD
-                                                                       symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll];
-    self.crashReporter = [[PLCrashReporter alloc] initWithConfiguration:config];
 
     return self;
 }
@@ -52,6 +50,8 @@
         return;
     }
 
+    interval = 0;
+    
     // 创建信号
     semaphore = dispatch_semaphore_create(0);
     NSLog(@"dispatch_semaphore_create:%@", [ZKLagMonitor getCurTime]);
@@ -97,36 +97,7 @@
                         continue; // 不足 5 次,直接 continue 当次循环,不将timeoutCount置为0
                     }
 
-                    // Enable the Crash Reporter.
-                    NSError *error;
-                    if (![self.crashReporter enableCrashReporterAndReturnError: &error]) {
-                        NSLog(@"Warning: Could not enable crash reporter: %@", error);
-                    }
-                    
-                    if ([self.crashReporter hasPendingCrashReport]) {
-                        NSError *error;
-
-                        // Try loading the crash report.
-                        NSData *data = [self.crashReporter loadPendingCrashReportDataAndReturnError:&error];
-                        if (data == nil) {
-                            NSLog(@"Failed to load crash report data: %@", error);
-                            return;
-                        }
-
-                        // Retrieving crash reporter data.
-                        PLCrashReport *report = [[PLCrashReport alloc] initWithData:data error:&error];
-                        if (report == nil) {
-                            NSLog(@"Failed to parse crash report: %@", error);
-                            return;
-                        }
-
-                        // We could send the report from here, but we'll just print out some debugging info instead.
-                        NSString *text = [PLCrashReportTextFormatter stringValueForCrashReport:report withTextFormat:PLCrashReportTextFormatiOS];
-                        NSLog(@"---------卡顿信息\n%@\n--------------", text);
-
-                        // Purge the report.
-                        [self.crashReporter purgePendingCrashReport];
-                    }
+                    [self handleCallbacksStackForMainThreadStucked];
                 }
             }
 //            NSLog(@"dispatch_semaphore_wait timeoutCount = 0，time:%@", [self getCurTime]);
@@ -144,6 +115,7 @@
     CFRunLoopRemoveObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
     CFRelease(observer);
     observer = NULL;
+    interval = 0;
 }
 
 #pragma mark - :. runloop observer callback
@@ -154,6 +126,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
 
     // 记录状态值
     monitor->activity = activity;
+    monitor->interval = CACurrentMediaTime();
 
     // 发送信号
 //    dispatch_semaphore_t semaphore = monitor->semaphore;
@@ -198,12 +171,36 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     return curTime;
 }
 
-+ (NSString *) getCurTime {
++ (NSString *)getCurTime {
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"YYYY/MM/dd hh:mm:ss:SSS"];
     NSString *curTime = [format stringFromDate:[NSDate date]];
     
     return curTime;
+}
+
+- (void)handleCallbacksStackForMainThreadStucked {
+    CGFloat time = CACurrentMediaTime() - self->interval;
+    if (self.generatingReport) return;
+    
+    NSString *backtraceLogs = [ZKLagMonitor genMainCallStackReport];
+    if (!backtraceLogs) {
+        return;
+    }
+    self.generatingReport = YES;
+    NSMutableString *logs = [NSMutableString stringWithFormat:@"卡顿时间:%.2f s", time];
+    [logs appendString:backtraceLogs];
+    NSLog(logs, nil);
+    
+    self.generatingReport = NO;
+}
+
++ (NSString *)genMainCallStackReport {
+    @try {
+        return [SMCallStack callStackWithType:SMCallStackTypeMain];
+    } @catch (NSException * e){
+        return @"";
+    }
 }
 
 @end

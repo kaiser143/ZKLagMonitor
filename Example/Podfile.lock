@@ -4,9 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - PLCrashReporter (1.7.2)
-  - ZKLagMonitor (0.1.0):
-    - PLCrashReporter
+  - ZKLagMonitor (0.1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -15,7 +13,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
-    - PLCrashReporter
 
 EXTERNAL SOURCES:
   ZKLagMonitor:
@@ -23,8 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  PLCrashReporter: aab2bb5301bdc461a2006d657004fbcd748813b8
-  ZKLagMonitor: 723e39f6f0f3e29e18658011c8fb679524fb02dc
+  ZKLagMonitor: 147f73290375f511b837d9f1a8ba04dec6b12831
 
 PODFILE CHECKSUM: 6c9aa8808d203456c6b165ab300524afd3e82207
 

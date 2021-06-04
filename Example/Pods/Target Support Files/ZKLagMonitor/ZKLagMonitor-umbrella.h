@@ -10,6 +10,12 @@
 #endif
 #endif
 
+#import "BSBacktraceLogger.h"
+#import "SMCallTrace.h"
+#import "SMCallTraceCore.h"
+#import "SMCallTraceTimeCostModel.h"
+#import "SMCallLib.h"
+#import "SMCallStack.h"
 #import "ZKLagMonitor.h"
 
 FOUNDATION_EXPORT double ZKLagMonitorVersionNumber;
